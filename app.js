@@ -30,8 +30,11 @@ addProductBtn.addEventListener("click", function (params) {
 	}
 
 	const totalPrice = parseInt(itemPrice.value) * parseInt(itemQuantity.value);
-	const tr = document.createElement("tr");
-	const th = document.createElement("th");
+	// const tr = document.createElement("tr");
+	// const th = document.createElement("th");
+	// Using Function
+	const tr = element("tr");
+	const th = element("th");
 	const td1 = document.createElement("td");
 	const td2 = document.createElement("td");
 	const td3 = document.createElement("td");
@@ -53,6 +56,10 @@ addProductBtn.addEventListener("click", function (params) {
 	//subTotal();
 	totalCalculation();
 });
+
+function element(param) {
+	return document.createElement(param);
+}
 
 function calculateSubTotal(params) {
 	let subTotal = 0;
