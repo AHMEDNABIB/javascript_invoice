@@ -29,6 +29,17 @@ addProductBtn.addEventListener("click", function (params) {
 		// </tr>;
 	}
 
+	if (
+		itemName.value == "" ||
+		itemPrice.value < 0 ||
+		itemQuantity.value < 0 ||
+		itemPrice.value == "" ||
+		itemQuantity.value == ""
+	) {
+		console.log("sorry");
+		return;
+	}
+
 	const totalPrice = parseInt(itemPrice.value) * parseInt(itemQuantity.value);
 	// const tr = document.createElement("tr");
 	// const th = document.createElement("th");
